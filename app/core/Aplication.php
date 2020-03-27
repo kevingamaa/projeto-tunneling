@@ -9,8 +9,7 @@ class App
     public $router;
     function __construct()
     {
-        $dotenv = \Dotenv\Dotenv::create(DIRREQ);
-        $dotenv->load();
+       
         $this->router = new Routing();
     }
 

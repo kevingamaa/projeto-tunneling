@@ -6,6 +6,7 @@ namespace Core\Traits;
 
 trait  TraitUrlParser {
     public function parseUrl($url = '') {
+        // dd($_GET);
         if(empty($url))
         {
             $url = $_GET['url'];
