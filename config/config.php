@@ -1,6 +1,6 @@
 <?php
 #diretorios raiz
-$internPath = "projeto-jestor/";
+$internPath = "projeto-tunneling/";
 define('DIRPAGE', "{$_SERVER['REQUEST_SCHEME']}://{$_SERVER['HTTP_HOST']}/{$internPath}" );
 // dd
 if(substr($_SERVER['DOCUMENT_ROOT'], -1) === '/') 
