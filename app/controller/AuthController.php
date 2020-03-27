@@ -9,6 +9,14 @@ use Core\Classes\Request;
 
 class AuthController extends Controller
 {
+
+    function __construct()
+    {
+        if(isset($_SESSION['user']))
+        {
+            redirect('tickets');
+        }
+    }
     public function login()
     {
         return  $this->view('auth.login');
@@ -25,7 +33,7 @@ class AuthController extends Controller
         $user = $user->where('email',  $request->email)->first();
         if(is_null( $user))
         {
-            return redirect('register', ['error' => 'Nenhum cadastro no email: '. $request->email]);
+            return redirect('login', ['error' => 'Nenhum cadastro no email: '. $request->email]);
         }
         $allow = password_verify($request->password,  $user->password);
 
@@ -33,6 +41,7 @@ class AuthController extends Controller
             Auth::starts($user);
             return redirect('tickets');
         }
+        
     }
 
     public function create(Request $request, User $user) {

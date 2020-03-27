@@ -12,6 +12,13 @@
                             <!-- <div class="alert alert-warning"></div> -->
                             <div class="card-body">
                                 <div class="form-row">
+                                <?php if (isset($_GET['error'])) : ?>
+                                        <div class="col-lg-12">
+                                            <div class="alert alert-warning">
+                                                <?= $_GET['error'] ?>
+                                            </div>
+                                        </div>
+                                    <?php endif ?>
                                     <div class="col-lg-12">
                                         <input type="text" class="form-control" placeholder="E-mail" name="email" autocomplete="email">
                                     </div>

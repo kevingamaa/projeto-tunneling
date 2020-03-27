@@ -21,6 +21,13 @@ class Routing
             'method' => 'GET',
             'path' => '404'
         ];
+        $this->routes[] =  (object) [
+            "ctrl" => "App\\Controllers\\DefaultController",
+            "action" => "forbidden",
+            'params' => [],
+            'method' => 'GET',
+            'path' => '401'
+        ];
     }
 
 

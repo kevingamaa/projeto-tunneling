@@ -9,7 +9,6 @@ class AuthMiddleware   {
 
     public function handle()
     {
-        $canPass = true;
         if(isset($_SESSION['user']))
         {
             $date = new \DateTime(date('Y-m-d H:i:s'));
@@ -17,11 +16,12 @@ class AuthMiddleware   {
             {
                 unset($_SESSION['user']);
                 unset($_SESSION['due_session']);
-                $canPass = false;
                 return redirect('home');
             }
+            return true;
+        }else {
+            return redirect('401');
         }
-        return  $canPass;
     }
     
 }
