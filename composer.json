@@ -1,0 +1,31 @@
+{
+    "name": "kevin/projeto-jestor",
+    "type": "project",
+    "authors": [
+        {
+            "name": "kevingamaa",
+            "email": "vitorkortez@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "league/plates": "^3.3",
+        "vlucas/phpdotenv": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/",
+            "Core\\": "app/core/"
+        },
+        "files": [
+            "app/helpers.php"
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
