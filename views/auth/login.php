@@ -12,7 +12,7 @@
                             <!-- <div class="alert alert-warning"></div> -->
                             <div class="card-body">
                                 <div class="form-row">
-                                <?php if (isset($_GET['error'])) : ?>
+                                    <?php if (isset($_GET['error'])) : ?>
                                         <div class="col-lg-12">
                                             <div class="alert alert-warning">
                                                 <?= $_GET['error'] ?>
