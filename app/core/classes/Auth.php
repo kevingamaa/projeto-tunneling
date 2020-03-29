@@ -7,7 +7,7 @@ use App\User;
 class Auth {
   
 
-   public function starts(User $user)
+   public function starts($user)
    {
         $_SESSION['user'] = $user;
         $date = new \DateTime(date('Y-m-d H:i:s'));
